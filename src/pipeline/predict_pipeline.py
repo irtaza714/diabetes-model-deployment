@@ -19,12 +19,8 @@ class PredictPipeline:
             for i in range(len(data_scaled_df.columns)):  
                 data_scaled_df = data_scaled_df.rename(columns={data_scaled_df.columns[i]: f'c{i+1}'})
             
-            high_vif_columns = ['c7', 'c8', 'c9', 'c10', 'c11', 'c12', 'c13', 'c14', 'c15']
-
-            data_scaled_df_vif = data_scaled_df.drop(high_vif_columns, axis =1)
-            
-            data_scaled_df_vif_np = np.array(data_scaled_df_vif)
-            preds = model.predict(data_scaled_df_vif_np)
+            data_scaled_df_np = np.array(data_scaled_df)
+            preds = model.predict(data_scaled_df_np)
 
         except Exception as e:
             raise CustomException(e, sys)

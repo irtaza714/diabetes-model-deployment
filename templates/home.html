@@ -3,19 +3,19 @@
 
 <head>
     <title>Diabetes Prediction</title>
-    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #F7F7F7;
+            background-color: #000000; /* Dark black background color */
+            color: #08FE04; /* Hex color #08FE04 for text color */
         }
 
         .container {
             max-width: 500px;
             margin: 0 auto;
-            background-color: #FFFFFF;
+            background-color: #000000; /* Dark black background color */
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -24,30 +24,31 @@
         .container h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: #333333;
+            color: #08FE04; /* Hex color #08FE04 for heading color */
         }
 
         .form-group {
-            margin-bottom: 20px; /* Increased margin */
+            margin-bottom: 20px;
         }
 
         .form-group label {
             font-weight: bold;
             display: block;
-            color: #333333;
-            margin-bottom: 10px; /* Added space below headings */
+            color: #08FE04; /* Hex color #08FE04 for label color */
+            margin-bottom: 10px;
         }
 
-        .form-group input[type="number"] {
-            width: 95%; /* Reduced input field width */
+        .form-group input[type="number"],
+        .form-group select {
+            width: 95%;
             padding: 8px;
             border: 1px solid #CCCCCC;
             border-radius: 4px;
         }
 
         .form-group input[type="submit"] {
-            background-color: #4CAF50;
-            color: #FFFFFF;
+            background-color: #08FE04; /* Hex color #08FE04 for button background color */
+            color: #000000; /* Black text color for button */
             border: none;
             padding: 10px 20px;
             border-radius: 4px;
@@ -58,16 +59,16 @@
             margin-top: 20px;
             text-align: center;
             font-weight: bold;
-            color: #333333;
+            color: #08FE04; /* Hex color #08FE04 for results color */
         }
 
         /* Additional Styling */
         body {
-            background-color: #EFEFEF;
+            background-color: #000000; /* Dark black background color */
         }
 
         .container {
-            background-color: #F8F8F8;
+            background-color: #000000; /* Dark black background color */
         }
     </style>
 </head>
@@ -79,15 +80,14 @@
             <div class="form-group">
                 <label for="gender">Gender</label>
                 <select id="gender" name="gender" required>
-                        <option value="Female">Female</option>
-                        <option value="Male">Male</option>
-                        <option value="Other">Other</option>
-                    </select>
+                    <option value="Female">Female</option>
+                    <option value="Male">Male</option>
+                    <option value="Other">Other</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="age">Age</label>
-                <input type="number" id="age" name="age" step="any"
-                    placeholder="Enter Age" required />
+                <input type="number" id="age" name="age" step="any" placeholder="Enter Age" required />
             </div>
             <div class="form-group">
                 <label for="hypertension">Hypertension</label>
@@ -106,18 +106,17 @@
             <div class="form-group">
                 <label for="smoking_history">Smoking History</label>
                 <select id="smoking_history" name="smoking_history" required>
-                        <option value="never">never</option>
-                        <option value="No Info">No Info</option>
-                        <option value="current">current</option>
-                        <option value="former">former</option>
-                        <option value="ever">ever</option>
-                        <option value="not current">not current</option>
-                    </select>
+                    <option value="never">never</option>
+                    <option value="No Info">No Info</option>
+                    <option value="current">current</option>
+                    <option value="former">former</option>
+                    <option value="ever">ever</option>
+                    <option value="not current">not current</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="bmi">BMI</label>
-                <input type="number" id="bmi" name="bmi" step="any"
-                    placeholder="Enter BMI" required />
+                <input type="number" id="bmi" name="bmi" step="any" placeholder="Enter BMI" required />
             </div>
             <div class="form-group">
                 <label for="HbA1c_level">Glycated Hemoglobin Level</label>
@@ -125,9 +124,9 @@
                     placeholder="Enter Glycated Hemoglobin Level" required />
             </div>
             <div class="form-group">
-            <label for="blood_glucose_level">Blood Glucose Level</label>
-            <input type="number" id="blood_glucose_level" name="blood_glucose_level" step="any"
-                placeholder="Enter Blood Glucose Level" required />
+                <label for="blood_glucose_level">Blood Glucose Level</label>
+                <input type="number" id="blood_glucose_level" name="blood_glucose_level" step="any"
+                    placeholder="Enter Blood Glucose Level" required />
             </div>
             <div class="form-group">
                 <input type="submit" value="Results" required />
@@ -138,4 +137,5 @@
         </div>
     </div>
 </body>
+
 </html>
